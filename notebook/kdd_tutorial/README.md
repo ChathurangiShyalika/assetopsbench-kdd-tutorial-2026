@@ -25,9 +25,3 @@ uv run jupyter lab
 Copy `.env.public` to `.env` and configure the model providers used for the Stirrup execution and judge. The server notebooks deliberately start with cheap/static calls; the IoT and work-order notebooks check CouchDB before querying it. TSFM inference is opt-in so a cold model download cannot derail the live session.
 
 Generated outputs live in `artifacts/kdd_tutorial/`. Keep execution and judging models different. Keep Stirrup's `tools-only` and `code` results on separate leaderboard tracks.
-
-To regenerate the notebooks after editing their source:
-
-```bash
-uv run python notebook/kdd_tutorial/generate_notebooks.py
-```
